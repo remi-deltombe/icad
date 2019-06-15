@@ -1,0 +1,18 @@
+{
+    "datadir": [
+        "./storage/samples/data/Sample"
+    ],
+
+    "network" : {
+        "REST" : {
+            "host" : "10.1.0.30",
+            "port" : 8080
+        },
+        "WebSocket" : {
+            "host" : "10.1.0.30",
+            "port" : 8081
+        }
+    },
+
+    "_refresh" : 1000
+}

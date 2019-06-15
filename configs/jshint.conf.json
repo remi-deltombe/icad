@@ -1,0 +1,10 @@
+{
+    "curly": true,
+    "maxdepth":3,
+    "maxparams": 3,
+    "maxstatements": 10,
+    "undef": true,
+    "globals": {
+        "console": true
+    }
+}

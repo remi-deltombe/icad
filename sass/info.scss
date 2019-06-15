@@ -1,0 +1,24 @@
+.info-title
+{    
+    font-size: unit(1.5);
+    margin-bottom: unit(.5);
+}
+
+
+.info-data
+{
+    border-top: 1px solid $color_grey_3;
+    border-bottom: 1px solid $color_grey_3;
+    padding-top: unit(.25);
+    padding-bottom: unit(.25);
+
+    &+.info-data
+    {
+        border-top: 0;
+    }
+}
+
+.info-data-value
+{
+    font-weight: bold;
+}

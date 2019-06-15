@@ -1,0 +1,17 @@
+.icon
+{
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: time(1);
+
+    &:hover
+    {
+        opacity: 1;
+    }
+}
+
+.icon-active
+{
+    filter: grayscale(0%);
+    opacity: 1;
+}

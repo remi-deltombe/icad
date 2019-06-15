@@ -1,0 +1,424 @@
+
+.project
+{
+}
+
+// Preview
+.project-preview
+{
+    position: absolute;
+    width: $preview_size;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    float: right;
+    border-left: $border_size solid $color_border;
+    height: 100%;
+    
+    .data
+    {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .project-preview-line-data
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        &:after
+        {
+            content:'';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+        }
+
+        &:after
+        {
+            border-bottom: 1px solid $color_orange;
+        }
+    }
+}
+
+// Borehole -----------------
+.project-boreholes
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: $preview_size;
+    bottom: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    overflow: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.project-borehole
+{
+    position: relative;
+    z-index: 1;
+
+    border-left: $border_size solid $color_border;
+    border-right: $border_size solid $color_border;
+
+    & + &
+    {
+        margin-left: unit(2);
+        box-shadow: unit(-2) 0 $color_border_light;
+    }
+}
+
+.project-borehole-header
+{
+    border-bottom: $border_size solid $color_border;
+    background: $color_white;
+}
+
+.project-borehole-header-title
+{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 14px;
+    line-height: unit(1);
+    padding: unit(1) unit(1) unit(.75);
+    background: $color_grey_0;
+    color: $color_grey_8;
+}
+
+.project-borehole-header-logs
+{
+    display: flex;
+    align-items: stretch;
+    border-top: $border_size solid $color_border_light;
+}
+
+.project-borehole-header-logs-column 
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    align-content: flex-end;
+    width: 100px;
+    position: relative;
+    border-left: $border_size solid $color_border;
+
+    > div
+    {
+        width: 100%;
+    }
+
+    /*
+    & ~ &
+    {
+        border-left: $border_size solid $color_border;
+    }
+    */
+
+    &.ruler
+    {
+        width: unit(3);
+        border-left: none;
+
+        .project-borehole-header-log
+        {
+            border-top: 0;
+        }
+    }
+} 
+
+.project-borehole-header-log
+{
+    padding: unit(0.25) unit(1);
+    width: 100%;
+    line-height: unit(1);
+    overflow: hidden;
+    position: relative;
+
+    margin-top: -1px;
+
+    border-top: $border_size solid $color_border_light;
+
+    &.active
+    {
+        box-shadow: inset -1px -1px #F06E00, inset 1px 1px #F06E00;
+    }
+
+    &:before
+    {
+        content:"";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        cursor: move;
+    }
+
+    .title
+    {
+        width: 100%;
+        text-align: center;
+        margin-bottom: -3px;
+    }
+    .preview
+    {
+        width: 100%;
+        height: 2px;
+    }
+    .min, .unit
+    {
+        float: left;
+        width: 33%;
+    }
+    .unit
+    {
+        text-align: center;
+    }
+    .max
+    {
+        float: right;
+        width: 33%;
+        text-align: right;
+    }
+    
+    /*
+    .dragzone-n
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: unit(1);
+        border-top: unit(0) solid $color_orange;
+        transition: time(1);
+        &:hover { border-top: unit(.25) solid $color_orange;}
+    }
+
+    .dragzone-s
+    {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: unit(1);
+        border-bottom: unit(0) solid $color_orange;
+        transition: time(1);
+        &:hover { border-bottom: unit(.25) solid $color_orange;}
+    }
+
+    .dragzone-e
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: unit(1);
+        border-right: unit(0) solid $color_orange;
+        transition: time(1);
+        &:hover { border-right: unit(.25) solid $color_orange;}
+    }
+
+    .dragzone-w
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: unit(1);
+        border-left: unit(0) solid $color_orange;
+        transition: time(1);
+        &:hover { border-left: unit(.25) solid $color_orange;}
+    }
+    */
+}
+
+
+.project-borehole-content-logs
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    display: flex;
+    align-items: stretch;
+
+    .dragzone
+    {
+        z-index: 1;
+        cursor: ew-resize;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        margin-left: -10px;
+        width: 20px;
+    }
+}
+
+.project-borehole-header-logs-container,
+.project-borehole-content-logs-container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    order:1;
+}
+
+.project-borehole-content-logs-column 
+{
+    position: relative;
+    width: 100px;
+    height: 100%;
+
+    border-left: $border_size solid $color_border;
+
+    .data
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    > div
+    {
+        width: 100%;
+        height: 100%;
+    }
+    
+    &.ruler
+    {
+        border: none;
+        width: unit(3);
+        order:0;
+    }
+}
+
+.project-borehole-line-data
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    &:before,
+    &:after
+    {
+        content:'';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+    }
+
+    &:before
+    {
+        border-top: 1px dashed rgba(0,0,0,0.5);
+    }
+
+    &:after
+    {
+        border-bottom: 1px dashed rgba(255,255,255,0.5);
+    }
+}
+
+.project-borehole-line-data-data
+{
+    position: absolute;
+    width:100px;
+    text-align: right;
+    text-shadow: 1px 1px 0 #FFF;
+}
+
+.project-borehole-line-data-firstdata
+{
+    padding: unit(1);
+}
+
+.project-borehole-line-data-histogram
+{
+    width: 100%;
+    height: unit(8);
+    position: relative;
+    background: rgba(0,0,0,0.1);
+}
+
+.project-borehole-line-data-histogram-color
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+}
+
+.project-borehole-line-data-reference
+{
+    z-index: 2;
+    padding: 0px 5px;
+    background: #fff;
+    display: block;
+    position: fixed;
+    border: 1px solid #aaa;
+    line-height: 20px;
+    margin-top:-10px;
+
+    
+    .input, input
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        background: $color_white;
+        height: 100%;
+        width: 100%;
+
+        &:focus
+        {
+            font-size: unit(1);
+        }
+    }
+
+    input
+    {
+        padding: 0px 5px;
+    }
+}
+
+
+@media screen and (max-width: $break_mobile) 
+{
+    .project-preview
+    {
+        width: $preview_size_mobile;
+    }
+
+    .project-boreholes
+    {
+        right: $preview_size_mobile;
+    }
+}

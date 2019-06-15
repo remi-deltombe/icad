@@ -1,0 +1,73 @@
+// Sidebar list
+.sidebar .storage-list
+{
+    padding-left: unit(.5);
+    
+    li
+    {
+        line-height: unit(2.5);
+    }
+
+    ul
+    {
+        padding-left: unit(1);
+        border-left: 2px solid $color_border_light;
+    }
+
+    .storage
+    {
+        color: $color_grey_8;
+    }
+
+    .status
+    {
+        display: block;
+        float: left;
+        width: unit(1) - 1px;
+        height: unit(1) - 1px;
+        position: relative;
+        top: unit(.75);
+        left: round(unit(-.3333));
+    }
+
+    .open > .status,
+    .close > .status
+    {
+        border: 1px solid $color_orange;
+        border-radius: 100%;
+
+        &:before,
+        &:after
+        {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top:50%;
+            margin-top: -1px;
+            height: 1px;
+            background: $color_orange;
+            transform: rotate3d(0,0,0,90deg);
+            transition: 0.3s;
+        }
+    }
+
+
+    .close > .status 
+    {
+        &:before
+        {
+            transform: rotate3d(0,0,1,180deg)
+        }
+        &:after
+        {
+            transform: rotate3d(0,0,1,90deg)
+        }
+    }
+
+    .close + div > ul
+    {
+        display: none;
+    }
+}

@@ -1,0 +1,44 @@
+canvas {
+   _background: rgba(255,0,0,.1); 
+}
+
+.debug
+{
+    position: absolute;
+    top: unit(1);
+    right: unit(4);
+    padding: unit(.5);
+    font-size: 10px;
+    color:$color_white;
+    background: rgba(0,0,0,.7);
+    z-index: 10000;
+}
+/*
+.project-borehole-content-logs-column
+{
+    &:before,
+    &:after
+    {
+        content: '';
+        display: block;
+        position: absolute;
+        background: red;
+    }
+
+    &:before
+    {
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 1px;
+    }
+
+    &:after
+    {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+    }
+}
+*/

@@ -1,0 +1,64 @@
+
+.input 
+{
+    padding: unit(.5) 0;
+}
+
+.input-label 
+{
+    font-weight: bold;
+}
+
+.input-field 
+{
+    background: #eee;
+
+    input
+    {
+        width: 100%;
+        height: 100%;
+        padding: unit(.5) unit(.75);
+        transition : time(1);
+        line-height: unit(1);
+
+        &:focus
+        {
+            font-size: unit(1.5);
+            line-height: unit(1.5);
+        }
+    }
+}
+
+.input-color
+{
+    .input-field 
+    {
+        position: relative;
+
+        input
+        {
+            padding-right: unit(2);
+
+            &:focus
+            {
+                padding-right: unit(2.5);
+                
+                & ~ .input-preview
+                {
+                    width: unit(2.5) + 4px;
+                    height: unit(2.5) + 4px;
+                }
+            }
+        }
+    }
+
+    .input-preview
+    {
+        width: unit(2) + 2px;
+        height: unit(2) + 2px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition : time(1);
+    }
+}

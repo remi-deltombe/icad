@@ -1,0 +1,9 @@
+@function unit($i)
+{
+    @return $i * $base_unit;
+}
+
+@function time($i)
+{
+    @return $i * 0.2s;
+}

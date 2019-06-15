@@ -1,0 +1,154 @@
+
+.sidebar-menu
+{
+    background: $color_white;
+    li
+    {
+        display: block;
+        width: $sidebar_menu_size;
+        height: $sidebar_menu_size;
+        text-align: center;
+        line-height: $sidebar_menu_size;
+    }
+}
+
+.sidebar-content
+{
+    padding: unit(2);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.sidebar-title
+{
+    margin: unit(1) 0 unit(2);
+    color: $color_grey_8;
+    font-size: unit(2);
+}
+
+.sidebar
+{
+    background: $color_grey_0;
+    border-left: 1px solid $color_grey_1;
+
+    &.left
+    {
+        border-right: 1px solid $color_grey_1;
+        border-left: 0;
+    }
+}
+
+@media screen and (min-width: $break_mobile) 
+{
+    .sidebar
+    {
+        position: absolute;
+        z-index: 10;
+        transition: .3s;
+        width: $sidebar_size;
+        top:0;
+        bottom:0;
+        
+        &.left
+        {
+            transform: translate3d(-100%,0, 0);
+
+            .sidebar-menu
+            {
+                border-right: 1px solid $color_border;
+                left: 100%;
+                background: $color_grey_0;
+            }
+        }
+
+        &.right {
+            right: 0;
+            transform: translate3d(100%,0, 0);
+
+            .sidebar-menu
+            {
+                right: 100%;
+                border-left: 1px solid $color_border;
+            }
+        }
+
+        &.open
+        {
+            transform: translate3d(0%,0, 0);
+        }
+    }
+
+
+    .sidebar-menu
+    {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: $sidebar_menu_size;
+    }
+}
+
+@media screen and (max-width: $break_mobile) 
+{
+    .sidebar
+    {
+        .sidebar-menu
+        {
+            position: absolute;
+            width: 50%;
+            bottom: auto;
+            height: $sidebar_menu_size;
+            top: 0;
+            z-index: 1;
+            background: $color_grey_0;
+            border-bottom: 1px solid $color_border;
+        }
+
+        &.left {
+            .sidebar-menu
+            {
+                left: 0;
+            }
+
+            .sidebar-content
+            {
+                transform: translate3d(-100%,0, 0);
+            }
+        }
+        &.right {
+            .sidebar-menu
+            {
+                right: 0;
+
+                li {
+                    float: right;
+                }
+            }
+
+            .sidebar-content
+            {
+                transform: translate3d(100%,0, 0);
+            }
+        }
+
+        &.open
+        {
+            .sidebar-content
+            {
+                transform: translate3d(0,0, 0);
+            }
+        }
+    }
+
+    .sidebar-content
+    { 
+        position: absolute;
+        background: $color_grey_0;
+        z-index: 1;
+        top: $sidebar_menu_size;
+        right:0;
+        bottom:0;
+        left: 0;
+        transition: .25s;
+    }
+}

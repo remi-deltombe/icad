@@ -1,0 +1,29 @@
+$base_unit : 12px;
+
+$sidebar_size: $base_unit * 20;
+$sidebar_menu_size: $base_unit * 3;
+$preview_size: $base_unit * 6;
+$preview_size_mobile: $base_unit * 5;
+$border_size: 1px;
+
+$color_white: #FFF;
+
+$color_grey_0: #FDFDFD;
+$color_grey_1: #EEEEEE;
+$color_grey_2: #F5F5F5;
+$color_grey_3: #F0F0F0;
+$color_grey_4: #D5D5D5;
+$color_grey_5: #ADADAD;
+$color_grey_6: #767676;
+$color_grey_7: #656565;
+$color_grey_8: #333;
+$color_grey_9: #000000;
+$color_grey_10: #000000;
+
+$color_orange: #F06E00;
+$color_orange_light: lighten(#F06E00, 45%);
+
+$color_border: $color_grey_4;
+$color_border_light: $color_grey_3;
+
+$break_mobile: 720px;

@@ -1,0 +1,638 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>ICad</title>
+        <link rel="stylesheet" href="../fonts/fira-code/stylesheet.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <script>
+            document.addEventListener('touchmove', function (event) {
+              if (event.scale !== 1) { event.preventDefault(); }
+            }, false);
+        </script>
+        <script>
+            var open = false
+            function toogleSidebar()
+            {
+                if(open)
+                {
+                    document.getElementById('SIDEBAR').className = "sidebar left"
+                }
+                else
+                {
+                    document.getElementById('SIDEBAR').className = "sidebar left open"
+                }
+                open=!open
+            }
+        </script>
+    </head>
+    <body>
+        <div class="app">
+        
+            <div class="debug">
+                <div>FPS : 12</div>
+            </div>
+
+            <div class="sidebar left open" id="SIDEBAR">
+                <div class="sidebar-tabs">
+                    <ul class="sidebar-menu">
+                        <li onclick="toogleSidebar()">S</li>
+                    </ul>
+                </div>
+                <div class="sidebar-content">
+                    <div class="sidebar-title">Storages</div>
+                    <ul class="storage-list">
+                        <li>
+                            <div class="storage open"><div class="status"></div>Storage A</div>
+                            <ul>
+                                <li>
+                                    <div class="project open"><div class="status"></div>Project A</div>
+                                    <ul>
+                                        <li>
+                                            <div class="borehole open"><div class="status"></div>Borehole A</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="borehole close"><div class="status"></div>Borehole B</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project close"><div class="status"></div>Project A</div>
+                                    <ul>
+                                        <li>
+                                            <div class="borehole open"><div class="status"></div>Borehole A</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="borehole close"><div class="status"></div>Borehole B</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="storage close"><div class="status"></div>Storage B</div>
+                            <ul>
+                                <li>
+                                    <div class="project open"><div class="status"></div>Project A</div>
+                                    <ul>
+                                        <li>
+                                            <div class="borehole open"><div class="status"></div>Borehole A</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="borehole close"><div class="status"></div>Borehole B</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project close"><div class="status"></div>Project A</div>
+                                    <ul>
+                                        <li>
+                                            <div class="borehole open"><div class="status"></div>Borehole A</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="borehole close"><div class="status"></div>Borehole B</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="storage open"><div class="status"></div>Storage C</div>
+                            <ul>
+                                <li>
+                                    <div class="project open"><div class="status"></div>Project A</div>
+                                    <ul>
+                                        <li>
+                                            <div class="borehole open"><div class="status"></div>Borehole A</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="borehole close"><div class="status"></div>Borehole B</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="project close"><div class="status"></div>Project A</div>
+                                    <ul>
+                                        <li>
+                                            <div class="borehole open"><div class="status"></div>Borehole A</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="borehole close"><div class="status"></div>Borehole B</div>
+                                            <ul>
+                                                <li>
+                                                    <div class="log">Log A</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log B</div>
+                                                </li>
+                                                <li>
+                                                    <div class="log">Log C</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar right">
+                <div class="sidebar-tabs">
+                    <ul class="sidebar-menu">
+                    </ul>
+                </div>
+                <div class="sidebar-content">
+                    
+                </div>
+            </div>
+
+            <div class="app-content">
+                <div class="project">
+                    <div class="project-preview">
+                        <div class="overlay-top"></div>
+                        <div class="overlay-bottom"></div>
+                        <canvas class="data"></canvas>
+                    </div>
+                    <div class="project-boreholes">
+                        <div class="project-borehole">
+                            <div class="project-borehole-header">
+                                <div class="project-borehole-header-title">
+                                    My borehole
+                                </div>
+                                <div class="project-borehole-header-logs">
+                                    <div class="project-borehole-header-logs-column">
+                                        <div class="project-borehole-header-log" style="width:30px">
+                                            <div class="title">m</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:120px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:120px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:200px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-borehole-content">
+                                <div class="project-borehole-content-logs">
+                                    <div class="project-borehole-content-logs-column" style="width:30px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:120px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:120px">
+                                        <canvas class="data"></canvas>
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:200px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-borehole">
+                            <div class="project-borehole-header">
+                                <div class="project-borehole-header-title">
+                                    My borehole
+                                </div>
+                                <div class="project-borehole-header-logs">
+                                    <div class="project-borehole-header-logs-column" style="width:30px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">m</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:120px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:300px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-borehole-content">
+                                <div class="project-borehole-content-logs">
+                                    <div class="project-borehole-content-logs-column" style="width:30px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:120px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:300px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-borehole">
+                            <div class="project-borehole-header">
+                                <div class="project-borehole-header-title">
+                                    My borehole
+                                </div>
+                                <div class="project-borehole-header-logs">
+                                    <div class="project-borehole-header-logs-column">
+                                        <div class="project-borehole-header-log" style="width:30px">
+                                            <div class="title">m</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:120px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:120px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:200px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-borehole-content">
+                                <div class="project-borehole-content-logs">
+                                    <div class="project-borehole-content-logs-column" style="width:30px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:120px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:120px">
+                                        <canvas class="data"></canvas>
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:200px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-borehole">
+                            <div class="project-borehole-header">
+                                <div class="project-borehole-header-title">
+                                    My borehole
+                                </div>
+                                <div class="project-borehole-header-logs">
+                                    <div class="project-borehole-header-logs-column" style="width:30px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">m</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:120px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:300px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-borehole-content">
+                                <div class="project-borehole-content-logs">
+                                    <div class="project-borehole-content-logs-column" style="width:30px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:120px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:300px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-borehole">
+                            <div class="project-borehole-header">
+                                <div class="project-borehole-header-title">
+                                    My borehole
+                                </div>
+                                <div class="project-borehole-header-logs">
+                                    <div class="project-borehole-header-logs-column">
+                                        <div class="project-borehole-header-log" style="width:30px">
+                                            <div class="title">m</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:120px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:120px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:200px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-borehole-content">
+                                <div class="project-borehole-content-logs">
+                                    <div class="project-borehole-content-logs-column" style="width:30px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:120px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:120px">
+                                        <canvas class="data"></canvas>
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:200px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-borehole">
+                            <div class="project-borehole-header">
+                                <div class="project-borehole-header-title">
+                                    My borehole
+                                </div>
+                                <div class="project-borehole-header-logs">
+                                    <div class="project-borehole-header-logs-column" style="width:30px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">m</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:120px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                    <div class="project-borehole-header-logs-column" style="width:300px">
+                                        <div class="project-borehole-header-log">
+                                            <div class="title">My log</div>
+                                            <canvas class="preview"></canvas>
+                                            <div class="min">0</div>
+                                            <div class="unit">m</div>
+                                            <div class="max">20</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-borehole-content">
+                                <div class="project-borehole-content-logs">
+                                    <div class="project-borehole-content-logs-column" style="width:30px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:120px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                    <div class="project-borehole-content-logs-column" style="width:300px">
+                                        <canvas class="data"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
